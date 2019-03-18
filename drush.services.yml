@@ -1,0 +1,10 @@
+services:
+  multiversion.commands:
+    class: \Drupal\multiversion\Commands\MultiversionCommands
+    arguments:
+      - '@config.factory'
+      - '@entity_type.manager'
+      - '@multiversion.manager'
+      - '@module_installer'
+    tags:
+      - { name: drush.command }
